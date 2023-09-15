@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build and Test') {
+            steps {
+                script {
+                    // Clean and compile the project
+                    //bat 'mvn clean compile'
+                    
+                    // Run the tests
+                    bat 'mvn test'
+                }
+            }
+        }
+        
+        stage('Generate JUnit Report') {
+            steps {
+                script {
+                    // Archive the test results for Jenkins to pick up
+                    junit 'target/surefire-reports/*.xml'
+                }
+            }
+        }
+    }
+}
