@@ -20,7 +20,7 @@ public class App
         // System.out.println( "Hello World!" );
 
         App addobject = new App();
-        int a=10 , b=5;
+        int a=10 , b=0;
 
         int product = addobject.multiply(a, b);   //calling the multiply method with two arguments
         int division = addobject.divide(a, b);
