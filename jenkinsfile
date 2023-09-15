@@ -12,13 +12,12 @@ pipeline {
                     bat 'mvn test'
                 }
             }
-        }
-
-        stage('Generate JUnit Report') {
-            steps {
-                script {
-                    // Archive the test results for Jenkins to pick up
-                    junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+            post {
+                always {
+                    script {
+                        // Archive the test results for Jenkins to pick up
+                        junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+                    }
                 }
             }
         }
