@@ -1,32 +1,24 @@
 pipeline {
     agent any
-    
+
     stages {
-        stage('Clean Workspace') {
-            steps {
-                script {
-                    cleanWs()
-                }
-            }
-        }
-        
         stage('Build and Test') {
             steps {
                 script {
                     // Clean and compile the project
-                    //sh 'mvn clean compile'
-                    
+                    //bat 'mvn clean compile'
+
                     // Run the tests
                     bat 'mvn test'
                 }
             }
-            
-            post {
-                always {
-                    script {
-                        // Archive the test results for Jenkins to pick up
+        }
+
+        stage('Generate JUnit Report') {
+            steps {
+                script {
+                    // Archive the test results for Jenkins to pick up
                     junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
-                    }
                 }
             }
         }
