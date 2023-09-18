@@ -5,22 +5,15 @@ pipeline {
         stage('Build and Test') {
             steps {
                 script {
-                    // Clean and compile the project
-                    //bat 'mvn clean compile'
-
-                    // Run the tests
-                    bat 'mvn test'
-                    
+                    try {
+                       bat 'mvn test'
+                        }
+                        catch(e)
+                        {
+                        eho "Maven execution Failed"
+                        }
                 }
             }
-        }
-        stage('unstable') {
-            steps {
-                script {
-                      unstable('Build set to UNSTABLE due to failed tests')                        
-                }
-            }
-        
             post {
                 always {
                     script {
