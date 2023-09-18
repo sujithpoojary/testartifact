@@ -10,7 +10,7 @@ pipeline {
                         }
                         catch(e)
                         {
-                        eho "Maven execution Failed"
+                        echo "Maven execution Failed"
                         }
                 }
             }
