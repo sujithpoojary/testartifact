@@ -17,9 +17,7 @@ pipeline {
                 always {
                     script {
                         // Archive the test results for Jenkins to pick up
-                        error('Build set to UNSTABLE due to failed tests')
-                        currentBuild.result = 'UNSTABLE'
-                        
+                        unstable('Build set to UNSTABLE due to failed tests')                        
                         junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
                     }
                 }
