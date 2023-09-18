@@ -13,11 +13,18 @@ pipeline {
                     
                 }
             }
+        }
+        stage('unstable') {
+            steps {
+                script {
+                      unstable('Build set to UNSTABLE due to failed tests')                        
+                }
+            }
+        
             post {
                 always {
                     script {
                         // Archive the test results for Jenkins to pick up
-                        unstable('Build set to UNSTABLE due to failed tests')                        
                         junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
                     }
                 }
