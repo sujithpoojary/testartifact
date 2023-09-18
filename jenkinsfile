@@ -10,13 +10,14 @@ pipeline {
 
                     // Run the tests
                     bat 'mvn test'
-                    currentBuild.result = 'UNSTABLE'
+                    
                 }
             }
             post {
                 always {
                     script {
                         // Archive the test results for Jenkins to pick up
+                        currentBuild.result = 'UNSTABLE'
                         junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
                     }
                 }
