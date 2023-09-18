@@ -17,8 +17,6 @@ pipeline {
                     script {
                         // Archive the test results for Jenkins to pick up
                         junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
-                        def testResult = junit testResults: '**/target/surefire-reports/*.xml'
-                        currentBuild.description = "Tests: ${testResult.failCount} failed"
                     }
                 }
             }
