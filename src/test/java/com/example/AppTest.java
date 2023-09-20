@@ -38,12 +38,12 @@ public class AppTest
     @Test
     public void testAddition() {  
         int result2 = app.add(10, 5);
-        assertEquals(result2,16);
+        assertEquals(result2,15);
         }
 
     @Test
     public void testSubtraction() {  
         int result3 = app.subtract(10, 5);
-        assertEquals(result3,4);
+        assertEquals(result3,5);
         }
 }
