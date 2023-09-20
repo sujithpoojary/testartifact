@@ -44,6 +44,6 @@ public class AppTest
     @Test
     public void testSubtraction() {  
         int result3 = app.subtract(10, 5);
-        assertEquals(result3,5);
+        assertEquals(result3,4);
         }
 }
