@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.AppTest" time="0.054" tests="4" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.AppTest" time="0.095" tests="4" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Amazon Corretto\jdk17.0.6_10\bin"/>
-    <property name="sun.java.command" value="C:\Users\700002~2\AppData\Local\Temp\surefire534442847476190378\surefirebooter17716211001889989911.jar C:\Users\7000027358\AppData\Local\Temp\surefire534442847476190378 2023-09-20T17-48-53_797-jvmRun1 surefire12382877077775759729tmp surefire_012432527494426795958tmp"/>
+    <property name="sun.java.command" value="C:\Users\700002~2\AppData\Local\Temp\surefire12356586271275222595\surefirebooter5473276702223922982.jar C:\Users\7000027358\AppData\Local\Temp\surefire12356586271275222595 2023-09-20T18-06-23_548-jvmRun1 surefire11709469587846275276tmp surefire_07145939721923149098tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\7000027358\Documents\GitHub\testartifact\target\test-classes;C:\Users\7000027358\Documents\GitHub\testartifact\target\classes;C:\Users\7000027358\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;C:\Users\7000027358\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\700002~2\AppData\Local\Temp\surefire534442847476190378\surefirebooter17716211001889989911.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\700002~2\AppData\Local\Temp\surefire12356586271275222595\surefirebooter5473276702223922982.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.6+10-LTS"/>
@@ -57,16 +57,12 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testMultiplication" classname="com.example.AppTest" time="0.007">
+  <testcase name="testMultiplication" classname="com.example.AppTest" time="0.013">
     <failure message="expected:&lt;50&gt; but was:&lt;60&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<50> but was:<60>
 	at com.example.AppTest.testMultiplication(AppTest.java:29)
 ]]></failure>
   </testcase>
-  <testcase name="testAddition" classname="com.example.AppTest" time="0">
-    <failure message="expected:&lt;15&gt; but was:&lt;16&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<15> but was:<16>
-	at com.example.AppTest.testAddition(AppTest.java:41)
-]]></failure>
-  </testcase>
+  <testcase name="testAddition" classname="com.example.AppTest" time="0"/>
   <testcase name="testDivision" classname="com.example.AppTest" time="0"/>
   <testcase name="testSubtraction" classname="com.example.AppTest" time="0"/>
 </testsuite>
