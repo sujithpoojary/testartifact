@@ -38,7 +38,7 @@ public class AppTest
     @Test
     public void testAddition() {  
         int result2 = app.add(10, 5);
-        assertEquals(result2,15);
+        assertEquals(result2,16);
         }
 
     @Test
